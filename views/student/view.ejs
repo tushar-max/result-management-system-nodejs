@@ -1,0 +1,49 @@
+<% if (teachersView) { %>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/resultdb">Student Records</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= student.Name %>'s Result</li>
+    </ol>
+  </nav>
+<% } %>
+
+<% if (!teachersView) { %>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= student.Name %>'s Result</li>
+    </ol>
+  </nav>
+<% } %>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>Hi <%= student.Name %></h1>
+            <a>Here is your result</a>
+            <hr>
+            <table class="resultTable">
+              <tr>
+                <td>Roll No.</td>
+                <td><%= student.RollNo %></td>
+              </tr>
+              <tr>
+                <td>Name</td>
+                <td><%= student.Name %></td>
+              </tr>
+              <tr>
+                <td>DOB</td>
+                <td><%= student.DOB.getDate() %>/<%= student.DOB.getMonth() %>/<%= student.DOB.getFullYear() %></td>
+              </tr>
+              <tr>
+                <td>Score</td>
+                <td><%= student.Score %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

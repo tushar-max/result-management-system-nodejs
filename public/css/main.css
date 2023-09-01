@@ -1,0 +1,54 @@
+.header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #d6e7d4;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    border-style: solid;
+    border-bottom-color: #46d7ac;
+    border-top-color: #46d7ac;
+    height: fit-content;
+}
+
+.alignlogout{
+    margin-top: 2%;
+    margin-left: 30%;
+    position: absolute;
+
+}
+
+.align {
+    margin-top: 1%;
+    margin-left: 85%;
+}
+
+.card {
+    margin-top: 5%;
+    border: 1px solid blue;
+    width: 48%;
+    padding: 5%;
+    position: absolute;
+    top: 6%;
+    left: 26%;
+    background-color: beige;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+} 
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.resultTable {
+    width: 70%;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}

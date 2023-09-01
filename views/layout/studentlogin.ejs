@@ -1,0 +1,55 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Search Result</li>
+    </ol>
+</nav>
+
+<% if (notfound) { %>
+    <div class="toast-container top-0 end-0 p-3">
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#007aff"></rect>
+                </svg>
+                <strong class="me-auto">Error</strong>
+                <small class="text-body-secondary">just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Credentials not found in the Database
+            </div>
+        </div>
+    </div>
+    <% notfound=false %>
+<% } %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Find Result</h1>
+                    <hr>
+                </div>
+                <form action="/viewResult" method="post">
+                    <div class="col">
+                        <label for="studentName">Student Name</label>
+                        <input type="text" class="form-control" id="studentName" name="studentName" value=""
+                            placeholder="Student Name" required>
+                    </div>
+                    <br>
+                    <div class="col">
+                        <label for="rollNo">Roll No.</label>
+                        <input type="number" class="form-control" id="rollNo" name="rollNo" value="" placeholder="Roll Number"
+                            required>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </form>
+                  <br>
+            </div>
+        </div>
+    </div>
+</div>
